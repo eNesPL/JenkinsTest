@@ -8,6 +8,9 @@ class TestSum(unittest.TestCase):
     def test_sum_tuple(self):
         self.assertEqual(sum((2, 2, 2)), 6, "Should be 6")
 
+    def test_sum_set(self):
+        self.assertEqual(sum({1, 2, 3}), 6, "Should be 6")
+
     def test_fibo(self):
         from functions import fibo
         self.assertEqual(fibo(0), 0, "Should be 0")
@@ -19,5 +22,9 @@ class TestSum(unittest.TestCase):
         self.assertEqual(fibo(6), 8, "Should be 8")
         self.assertEqual(fibo(7), 13, "Should be 13")
         self.assertEqual(fibo(8), 21, "Should be 21")
+
 if __name__ == '__main__':
     unittest.main()
+
+    from functions import image_to_ascii, request_random_image
+    image_to_ascii(request_random_image())

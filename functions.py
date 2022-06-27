@@ -6,4 +6,3 @@ def fibo(x):
         return 1
     else:
         return fibo(x-1) + fibo(x-2)
-
